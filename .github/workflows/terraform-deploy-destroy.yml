@@ -20,8 +20,8 @@ jobs:
     env:
       TF_IN_AUTOMATION: true
       TF_INPUT: false
-      TF_VAR_ami_id: ${{ secrets.TF_VAR_ami_id }}
-      TF_VAR_key_name: ${{ secrets.TF_VAR_key_name }}
+      ami: ${{ secrets.TF_VAR_ami_id }}
+      key_name: ${{ secrets.TF_VAR_key_name }}
 
 
     steps:
