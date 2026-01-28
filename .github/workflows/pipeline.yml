@@ -1,4 +1,4 @@
-name: Ansible Deploy
+name: Ansible Deployment (Java + Nginx)
 
 on: 
   workflow_dispatch: {}
