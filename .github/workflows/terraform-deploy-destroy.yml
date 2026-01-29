@@ -37,10 +37,10 @@ jobs:
     - name: generate variable.tfvars
       working-directory: terraform
       run: |
-        cat > terraform.tfvars <<EOF  
-        ami = "${{ secrets.TF_VAR_ami_id }}"
+        cat <<EOF > terraform.tfvars
+        ami_id   = "${{ secrets.TF_VAR_ami_id }}"
         key_name = "${{ secrets.TF_VAR_key_name }}"
-        EOF 
+        EOF
 
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v3
