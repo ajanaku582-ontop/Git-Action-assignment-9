@@ -36,7 +36,7 @@ jobs:
         aws-region: "us-east-2"
     - name: generate variable.tfvars
       run: |
-          cat > terraform.tfvars << EOF  
+          cat > terraform.tfvars <<EOF  
           ami = "${{ secrets.TF_VAR_ami_id }}"
           key_name = "${{ secrets.TF_VAR_key_name }}"
           EOF 
@@ -54,7 +54,7 @@ jobs:
       if: github.event.inputs.tf_action == 'plan'
       working-directory: terraform
       run: terraform plan
-      
+
 
     - name: Terraform Apply
       if: github.event.inputs.tf_action == 'apply'
